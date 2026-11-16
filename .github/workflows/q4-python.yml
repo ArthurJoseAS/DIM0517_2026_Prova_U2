@@ -28,6 +28,6 @@ jobs:
         run: |
           pytest -v
       - name: Build_Docker
-        run: docker build -t API:1.0 .
+        run: docker build -t apisaude:1.0 .
       - name: Subir_Docker
-        run: docker run -d -p 8080:8080 --name api API:1.0
+        run: docker run -d -p 8080:8080 --name api apisaude:1.0
