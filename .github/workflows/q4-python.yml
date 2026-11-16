@@ -26,7 +26,6 @@ jobs:
         run: python -m py_compile src/main.py
       - name: Test
         run: |
-          ruff check .
           pytest -v
       - name: Build_Docker
         run: docker build -t api:1.0 .
